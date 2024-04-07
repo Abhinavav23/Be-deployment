@@ -12,4 +12,11 @@ require("./connectToDb");
 app.use("/product", productRouter);
 app.use("/user", userRouter);
 
+app.get("/", (req, res) => {
+    res.status(200).json({
+        status: "success",
+        message: "this is a free user management API"
+    })
+})
+
 module.exports = app;
